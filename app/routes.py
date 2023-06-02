@@ -8,11 +8,11 @@ def index():
 
 @app.route("/favorites")
 def images():
-    image = [
-        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
-        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
-        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
-        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
-        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">')
+    images = [
+        "https://picsum.photos/600/300?random=2",
+        "https://picsum.photos/300/150?random=2",
+        "https://picsum.photos/600/300?random=2",
+        "https://picsum.photos/300/150?random=2",
+        "https://picsum.photos/600/300?random=2"
     ]
-    return render_template('index.html' )
+    return render_template('index.html', images=images )
