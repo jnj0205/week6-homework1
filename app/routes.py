@@ -6,13 +6,13 @@ def index():
     return render_template('index.html', name='Favorite places')
 
 
-@app.route("/favorite")
-def favorite():
-    favorite = [
-        ('image'),
-        ('image'),
-        ('image'),
-        ('image'),
-        ('image')
+@app.route("/favorites")
+def images():
+    image = [
+        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
+        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
+        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
+        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">'),
+        ('<img src="https://picsum.photos/600/300?random=2" class="rounded mx-auto d-block" alt="...">')
     ]
-    return render_template('favorites.html' )
+    return render_template('index.html' )
